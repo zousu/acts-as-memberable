@@ -1,6 +1,6 @@
 class ActsAsMemberableMigration < ActiveRecord::Migration
   def self.up
-    create_table :memberables do |t|
+    create_table :memberables, id: false do |t|
       t.integer :user_id
       t.integer :memberable_id
       t.string :memberable_type
